@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Lab15_Xamarin.MainPage">
+
+    <StackLayout>
+
+        <StackLayout Margin="1" Padding="1">
+            
+            <ListView x:Name="listOfPersonal" RowHeight="200">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="DNI" />
+                                <Label Text="{Binding Dni}" TextColor="Black" />
+                                <Label Text="Nombre" />
+                                <Label Text="{Binding Nombre}" TextColor="Black" />
+                                <Label Text="Paterno" />
+                                <Label Text="{Binding Paterno}" TextColor="Black" />
+                                <Label Text="Materno" />
+                                <Label Text="{Binding Materno}" TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
